@@ -1,0 +1,103 @@
+/* Set up variables for colors */
+:root {
+  --primary-color: #a32633;
+  --secondary-color: #60262c;
+  --background-color: #f3f3f3;
+  --text-color: #333;
+}
+
+/* Global styling */
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif; 
+}
+
+body {
+  background: var(--background-color);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* Header styling */
+#title {
+  margin-top: 50px;
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+/* Image styling */
+#image {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+#img-div {
+  background: white;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#img-caption {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+/* Tribute info styling */
+#headline {
+  margin-top: 50px;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+#tribute-info {
+  background-color: var(--background-color);
+  padding: 50px;
+}
+
+#tribute-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tribute-info li {
+  margin-bottom: 20px;
+  font-size: 1.0rem;
+  color: var(--text-color);
+}
+
+#tribute-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+#tribute-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease-in;
+}
+
+#tribute-link:hover::before {
+  width: 100%;
+}
